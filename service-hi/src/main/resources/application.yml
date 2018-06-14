@@ -3,5 +3,18 @@ spring:
     name: server-hi
   zipkin:
     base-url: http://localhost:9411
+    enabled: true
+  ##use rabbitmq
+  sleuth:
+    sampler:
+      percentage: 1.0
+    enabled: true
+  rabbitmq:
+    host: 192.168.173.150
+    port: 5672
+    username: test
+    password: test
+    publisher-confirms: true
+    virtual-host: tms
 server:
   port: 8988
